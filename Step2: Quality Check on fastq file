@@ -4,6 +4,6 @@
 #Make sure you do the following in the same folder where you have downloaded trimmomatic tool
 
 #Here my fastq file name is test
-fastqc test.fastq
+Code1:fastqc test.fastq
 
 #Check the folder for an HTML file which should be in the name test_fastqc.html 
