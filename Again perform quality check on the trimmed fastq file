@@ -1,7 +1,0 @@
-#Here fastqc can only be performed if FastQC software is downloaded correctly
-
-Code: fastqc test_trimmed.fastq 
-
-
-#Output file would be in the name test_trimmed_fastqc.html file 
-#Compare with the untrimmed data. 

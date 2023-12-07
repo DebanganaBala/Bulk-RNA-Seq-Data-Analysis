@@ -1,0 +1,21 @@
+#Make sure HISAT2 is already downloaded and your reference genome is in the same folder
+#My reference genome is in the grch38 folder which is present in my current working directory
+#working directory is a folder names analysis that contains fastq file, trimmomatic tool, grch38 folder. 
+#Use Linux Environment 
+
+code: hisat2 -q --rna-strandness R -x grch38/genome -U test_trimmed.fastq | samtools sort -o test_trimmed.bam 
+
+
+
+
+######################################## CODE EXPLANATION ##########################################################
+
+# -q ->  defines input file will be in fastq format 
+# --rna-strandness R -> reads are reverse stranded 
+# -x -> points to the location of the reference genome 
+# grch38/genome -> requesting hisat2 to use the genome file present in the grch38 folder for the alignment purpose
+# test_trimmed.fastq -> name of the input file 
+# | -> pipe the output of hisat2 into samtools. Then the output sam file is converted into a bam file using the sort command
+# test_trimmed.bam -> self named output file
+# Process takes time depending on the size of the RNA sequencing reads 
+
