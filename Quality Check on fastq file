@@ -6,4 +6,4 @@
 #Here my fastq file name is test
 fastqc test.fastq
 
-#Check the folder for an HTML file which should be in the name test_fastqc.html
+#Check the folder for an HTML file which should be in the name test_fastqc.html 
