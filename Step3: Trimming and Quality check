@@ -1,0 +1,27 @@
+############################### TRIMMING POOR QUALITY READS IN FASTQ FILE #################################################
+
+#Make sure trimmomatic-0.39 and your fastq file is in the same folder 
+#Use linux environment and make sure its working environment is the folder x which has both trimmomatic tool and fastq file 
+
+Code1:java -jar trimmomatic-0.39.jar SE -threads 4 test.fastq test_trimmed.fastq TRAILING:10 -phred 33 
+ 
+
+
+################################### PERFORM QUALITY CHECK ON TRIMMED FASTQ FILE ############################################
+
+
+#Here fastqc can only be performed if FastQC software is downloaded correctly
+
+Code2: fastqc test_trimmed.fastq 
+
+
+#Output file would be in the name test_trimmed_fastqc.html file 
+#Compare with the untrimmed data. 
+
+############################################################################################################################
+#EXPLANATION of the above code
+
+#the above code is letting the terminal know that the trimmomatic-0.39.jar is a java file and it is in jar file format. The SE here stands for single end sequencing reads 
+# The fastq file consists of single end sequencing reads and threads 4 means its using 4 CPUs for the analysis 
+#test.fastq is input and test_trimmed.fastq will be the output file name. 
+# Phred score is kept at 33. Which means that only those sequencing data will be retained which will have a qualoty score of 33
