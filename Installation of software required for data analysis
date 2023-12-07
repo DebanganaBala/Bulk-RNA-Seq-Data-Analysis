@@ -1,5 +1,5 @@
-#Use Linux enviornment for performing the following steps 
-#Maintain a single folder which will contain trimmomatic tool(trimmomatic-0.39) and fastq file
+#Use Linux environment for performing the following steps 
+#Maintain a single folder that will contain trimmomatic tool(trimmomatic-0.39) and fastq file
 
 #FastQC Software 
 sudo apt-get -y install fastqc
