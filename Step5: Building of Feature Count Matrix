@@ -1,0 +1,26 @@
+#Requirements for building feature count matrix: gtf file and bam file 
+#Make sure GTF file and bam are in the same folder which has trimmomatic tool and fastq file
+
+############################################################### DOWNLOAD GTF FILE ############################################################################################
+#The Gene Transfer Format (GTF) file contains genomic annotation information for the reference genome. I used the GRCh38 genome, and its GTF file was obtained from ensembl.org.
+#process of downloading gtf file if you are using the grch38 genome.
+#Go to https://ftp.ensembl.org/pub/release-106/gtf/    -> Select the appropriate species which in my case is "Homo sapiens" -> Download GTF file "Homo_sapiens.GRCh38.106.gtf.gz" -> Extract gtf file
+
+############################################################# Building of Feature Count Matrix with Subread tool #############################################################
+#Make sure the Subread tool is installed
+#This code is done in a Linux environment 
+
+Code:FeatureCounts -s 1 -a Homo_sapiens.GRCh38.106.gtf -o test_featurecounts.txt test_trimmed.bam
+
+
+###################################################################### CODE EXPLANATION ##########################################################################################
+# FeatureCounts -> function of Subread tool. It is used to count the number of reads or fragments that map to specific genomic features, such as genes, exons, or other function elements 
+# -s -> strandedness of reads in input bam file 
+# -s 0 -> unstranded data (It doesn't consider the direction of the reads)
+# -s 1 -> unpaired reads 
+# -s 2 -> paired-end reads
+# -a -> Specify the GTF file
+# Homo_sapiens.GRCh38.106.gtf -> name of the GTF file 
+# test_featurecounts.txt -> name of the output file (could be specified by user)
+# test_trimmed.bam -> input bam file that was generated during the process of alignment 
+#when opening the output file ("test_featurecounts.txt") -> When opening this in Excel make sure to click ✔ on Delimited, Tab & Space.
