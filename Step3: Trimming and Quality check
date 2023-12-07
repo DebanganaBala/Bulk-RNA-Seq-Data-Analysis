@@ -19,7 +19,7 @@ Code2: fastqc test_trimmed.fastq
 #Compare with the untrimmed data. 
 
 ############################################################################################################################
-#EXPLANATION of the above code
+#EXPLANATION of the trimming analysis code
 
 #the above code is letting the terminal know that the trimmomatic-0.39.jar is a java file and it is in jar file format. The SE here stands for single end sequencing reads 
 # The fastq file consists of single end sequencing reads and threads 4 means its using 4 CPUs for the analysis 
