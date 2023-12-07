@@ -1,4 +1,4 @@
-#Use Linux environment for performing the following steps 
+#Use a Linux environment for performing the following steps 
 #Maintain a single folder that will contain trimmomatic tool(trimmomatic-0.39) and fastq file
 
 #FastQC Software 
@@ -9,7 +9,7 @@ sudp apt-get -y install hisat2
 
 #Subread Software 
 sudo apt-get -y install subread
-
+ 
 #Samtools
 sudp apt install samtools 
 
