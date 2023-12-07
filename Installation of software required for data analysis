@@ -1,0 +1,16 @@
+#Use Linux enviornment for performing the following steps 
+#Maintain a single folder which will contain trimmomatic tool(trimmomatic-0.39) and fastq file
+
+#FastQC Software 
+sudo apt-get -y install fastqc
+
+#Hisat2 Software 
+sudp apt-get -y install hisat2
+
+#Subread Software 
+sudo apt-get -y install subread
+
+#Samtools
+sudp apt install samtools 
+
+#Download Trimmomatic tool from USA DELLAB.org-> select version 0.39 binary-> download zip folder-> extract "trimmomatic-0.39"
