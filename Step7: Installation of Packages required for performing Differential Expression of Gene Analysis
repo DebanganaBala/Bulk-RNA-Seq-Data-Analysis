@@ -1,0 +1,10 @@
+# The Following Packages are required. Use RStudio. 
+
+#Bioconductor: Open source software to handle biological data. To use Bioconductor first have to install Bioconductor 
+Code: if (!require("BiocManager", quietly = TRUE))
+        install.packages("BiocManager")
+      BiocManager::install()
+
+#Installing DESeq2 Package
+Code: BiocManager::install("DESeq2")
+      library(DESeq2)
