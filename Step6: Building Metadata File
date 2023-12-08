@@ -13,6 +13,7 @@
 #Second Column: Cell line names which are N61311, N052611, N080611, N061011, N61311, N052611, N080611, and N061011. Notably, each cell line appears twice, representing two conditions: one where it received treatment (Treated) and the other where it was untreated (Untreated).
 #Third Column: Specifies the treatment status for each cell line. If the cell line underwent a specific treatment, it is labeled as "Treated." Conversely, if it served as the control group without any treatment, it is labeled as "Untreated." 
 
+####################################################################################################################################################
 #I have added my metadata file and feature count matrix. Do check and compare. Find relation as metadata is a medium that provides information of feature count matrix. 
 
 
