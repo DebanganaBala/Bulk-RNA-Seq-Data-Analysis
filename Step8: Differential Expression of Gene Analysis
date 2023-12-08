@@ -1,0 +1,55 @@
+#Create a folder that has feature count matrix and metadata in csv format
+#Make this folder your working directory
+# Use RStudio
+
+
+#Uploading the Feature Count matrix and Metadata File in the working directory
+cnt <- read.csv("Feature_Count_Matrix.csv", header = TRUE, row.names = 1)
+
+met <- read.csv("Metadata.csv", header = TRUE, row.names = 1)
+
+
+#In this step, we validate the alignment between the column names in the feature count matrix and the row names in the metadata CSV file. 
+#It's essential to ensure not only the consistency of names but also their order. 
+#This verification is crucial for establishing a reliable connection between the quantitative data and the corresponding experimental conditions.
+
+all(colnames(cnt) %in% rownames(met))
+all(colnames(cnt)== rownames(met))
+
+#If the above lines are true then build the DESeq Dataset 
+
+#################################################################  Building DESeq dataset #####################################################################################
+
+dds <- DESeqDataSetFromMatrix(countData = cnt, colData = met, design = ~dexamethasone)
+
+
+
+############################################################## Removal of low-count reads #####################################################################################
+
+keep <- rowSums(counts(dds)) >= 10
+
+#Subsetting 
+dds <- dds[keep, ]
+dds #thousand of rows are removed.
+
+# Setting reference for DEG Analysis 
+
+dds$dexamethasone <- relevel(dds$dexamethasone, ref ="untreated")
+
+
+#########################################################  Perform DEG Analysis ############################################################################################
+
+deg <- DESeq(dds)
+
+#to get the results 
+
+res <- results(deg)
+
+#######################################################  Saving the result as a CSV file ##################################################################################
+
+write.csv(res,"test.csv")
+
+
+#Using the summary function, it will provide the number of upregulated, downregulated, and outliers in the read count. 
+
+summary(res)
