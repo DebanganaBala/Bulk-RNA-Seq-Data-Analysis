@@ -50,6 +50,6 @@ res <- results(deg)
 write.csv(res,"test.csv")
 
 
-#Using the summary function, it will provide the number of upregulated, downregulated, and outliers in the read count. 
+#By utilizing the summary function, we can obtain a concise overview of the read count data, discerning the number of upregulated, downregulated, and outlier observations.  
 
 summary(res)
