@@ -32,7 +32,7 @@ keep <- rowSums(counts(dds)) >= 10
 dds <- dds[keep, ]
 dds #thousand of rows are removed.
 
-# Setting reference for DEG Analysis 
+# Setting reference for DEG Analysis. The DESeq is carrying out the differential analysis of genes keeping the untreated cell lines as a reference.
 
 dds$dexamethasone <- relevel(dds$dexamethasone, ref ="untreated")
 
