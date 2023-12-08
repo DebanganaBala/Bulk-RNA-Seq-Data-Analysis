@@ -1,0 +1,23 @@
+#Does not require programming, instead, use Excel and make your metadata 
+#Metadata provides information on the study design. For Differential Expression Analysis, only the Feature Count Matrix(contains count data of each study) is not enough, you also need a Metadata File.
+
+#My dataset encompasses four distinct cell lines, namely N61311, N052611, N080611, and N061011. 
+#Each of these cell lines underwent two conditions: treatment with Dexamethasone and a control group left untreated.
+
+#Objective: To find differential gene analysis between treated and untreated cell lines
+
+################################################# MAKING OF METADATA #############################################################################
+
+#My metadata had 3 columns:
+#first column: are the row names that correspond to the column names of the feature count matrix. Please make sure they are the same and are in similar order. 
+#Second Column: Cell line names which are N61311, N052611, N080611, N061011, N61311, N052611, N080611, and N061011. Notably, each cell line appears twice, representing two conditions: one where it received treatment (Treated) and the other where it was untreated (Untreated).
+#Third Column: Specifies the treatment status for each cell line. If the cell line underwent a specific treatment, it is labeled as "Treated." Conversely, if it served as the control group without any treatment, it is labeled as "Untreated." 
+
+#I have added my metadata file and feature count matrix. Do check and compare. Find relation as metadata is a medium that provides information of feature count matrix. 
+
+
+
+#Relationship:
+#The metadata file acts as a bridge between the feature count matrix and the experimental conditions. It tells you which samples (columns in the feature count matrix) belong to which cell line and whether they underwent treatment.
+#In simpler terms, when you look at your feature count matrix, you can cross-reference the feature names with the metadata. This allows you to understand the numeric data and the experimental context, such as which cell line it represents and whether it was subjected to treatment.
+#Understanding this relationship is crucial for downstream analyses, as it helps you interpret the biological significance of the observed changes in the feature count matrix, considering the different treatment conditions applied to the cell lines.
