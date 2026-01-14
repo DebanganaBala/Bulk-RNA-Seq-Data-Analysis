@@ -4,7 +4,7 @@
 
 This repository provides a complete analysis workflow to process raw bulk RNA-Seq data, from quality checks and read alignment to differential gene expression analysis. The workflow combines standard bioinformatics tools with R scripting to generate meaningful biological insights out of raw sequencing data.
 
-📌 Project Overview
+### 📌 Project Overview
 
 Bulk RNA-Seq (RNA sequencing) is a powerful technique to quantify gene expression levels across different biological samples and conditions. This analysis pipeline guides you through essential steps including:
 
@@ -22,7 +22,7 @@ Visualization of results
 
 This project uses widely-adopted tools and established methods, such as quality assessment with FastQC, alignment with HISAT2, and differential expression analysis with R (DESeq2 or similar packages).
 
-🧰 Tools & Software
+### 🧰 Tools & Software
 
 The workflow depends on the following tools:
 
@@ -44,16 +44,8 @@ DESeq2 – Differential expression analysis of count data
 
 You’ll need these installed in a Linux environment for the Bash steps, and R with the necessary libraries for statistical analysis.
 
-📁 Repository Structure
-├── DEG analysis.R           # R script for differential expression
-├── Feature_Count_Matrix.csv # Raw gene count table
-├── Metadata.csv             # Sample metadata for analysis
-├── README.md                # This documentation
-├── test_fastqc.html         # Example FastQC output
-├── test.csv                 # (Example/test file)
-└── ...                      # Additional intermediate files
 
-🧠 Workflow Steps
+## 🧠 Workflow Steps
 1. Install Required Software
 
 Install command-line tools and R packages before starting the analysis.
@@ -82,21 +74,21 @@ Create a metadata file detailing sample groupings and conditions, which will be 
 
 Run an R script to perform differential expression using DESeq2 or equivalent, visualize results, and extract significant genes.
 
-🧪 Example Outputs
+### 🧪 Example Outputs
 
 ✔ Quality assessment HTML reports
 ✔ Gene count matrices
 ✔ Volcano plots, MA plots, and differential expression tables
 ✔ Lists of significantly up-/down-regulated genes
 
-📚 References & Learning Resources
+### 📚 References & Learning Resources
 
 This pipeline reflects general conventions in bulk RNA-seq analysis. For more background on typical workflows, steps such as read mapping and differential expression are guided by established tutorials and best practices.
 
-📜 License
+### 📜 License
 
 This project is provided as-is for educational and research purposes.
 
-📌 Acknowledgements
+### 📌 Acknowledgements
 
 Inspired by standard RNA-Seq data analysis tutorials and courses, including Bioinformatics: Learn Bulk RNA-Seq Data Analysis From Scratch (Udemy), which guided portions of this workflow.
