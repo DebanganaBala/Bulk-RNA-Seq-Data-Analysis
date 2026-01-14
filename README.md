@@ -1,6 +1,6 @@
-Bulk RNA-Seq Data Analysis
+# Bulk RNA-Seq Data Analysis
 
-Step-by-step pipeline for bulk RNA-sequencing data analysis using Bash and R
+## Step-by-step pipeline for bulk RNA-sequencing data analysis using Bash and R
 
 This repository provides a complete analysis workflow to process raw bulk RNA-Seq data, from quality checks and read alignment to differential gene expression analysis. The workflow combines standard bioinformatics tools with R scripting to generate meaningful biological insights out of raw sequencing data.
 
